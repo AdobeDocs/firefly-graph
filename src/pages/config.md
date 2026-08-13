@@ -1,5 +1,5 @@
 - pathPrefix:
-    - /dev-docs-template/
+    - /firefly-graph/
 
 - pages:
     - [Analytics](index.md)

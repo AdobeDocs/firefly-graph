@@ -5,6 +5,8 @@ description: Design philosophy for building nodes that compose well in Project G
 
 # How to Think About Nodes
 
+This page hands you a way to think about node design before you commit to code. It's about judgment. You'll get a vocabulary for it: the behavioral classes a node can fall into, when a port should carry a stream, a list, or a single value, how wicked types let one port accept many datatypes, and the anti-patterns that quietly wreck composability. Come here once you've built a node or two and want the next ones to slot cleanly into the ecosystem instead of fighting it.
+
 ## Overview
 
 Through years of research and iteration, the Project Graph team has developed a behavioral classification system that helps ensure nodes are consistent, composable, and intuitive. This guide explains how to think about nodes based on what they DO, not just what they process.

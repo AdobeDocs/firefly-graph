@@ -7,6 +7,8 @@ description: Visual design guidelines for building widgets consistent with the P
 
 This section provides visual design guidelines for building widgets that are consistent with the Project Graph design system. Well-designed widgets enhance the user experience by providing familiar, intuitive interactions for data editing and visualization.
 
+This page is about making widgets that feel native to the graph editor rather than bolted on. You'll get the core design principles, a clear test for when to build a new widget versus reuse one, layout rules for both port and node widgets, and the Spectrum design tokens to style against. Read it before you write CSS. It'll save you a redesign.
+
 ## Key Design Principles
 
 **Compact by default**: Port widgets must be as small as possible since they share space with ports. Design for the minimum viable interaction surface.

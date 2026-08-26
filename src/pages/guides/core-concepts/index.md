@@ -7,6 +7,8 @@ description: How the Project Graph plugin system is architected — datatypes, w
 
 The Project Graph plugin system provides an extensible architecture for building custom nodes, datatypes, and UI components. Understanding the core concepts of how these plugins work together is essential for developing effective graph-based workflows.
 
+Start here. This page gives you the mental model the rest of the guide assumes: how the four plugin types depend on each other, how a value moves from one node's output port into another's input, and what terms like port, binding, and resolution actually mean. Once it clicks, the implementation pages read as variations on one idea instead of ten separate APIs.
+
 ## The Plugin Ecosystem
 
 The plugin system is built on four foundational types that work together:

@@ -5,6 +5,8 @@ description: Define the data shapes that flow through a Project Graph workflow.
 
 # Developing Datatypes
 
+After this page you'll be able to define your own datatypes: intrinsic ones for numbers and strings, resource types for images and other assets, and composite types assembled from datatypes you already have. You'll also know when to skip all that and reuse an existing type instead. Datatypes are the foundation. Every widget and node builds on them, so getting their shape right pays off everywhere downstream.
+
 ## 1. Introduction
 
 Datatypes define the shape of data that flows through a Project Graph workflow. They are the foundation of the plugin ecosystem — every widget and node depends on datatypes. A datatype has no UI of its own; instead, it references a `defaultWidget` that the platform uses to display and edit values of that type.

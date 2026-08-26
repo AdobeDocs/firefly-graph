@@ -5,6 +5,8 @@ description: Build Lit web components that view and edit datatype values in Proj
 
 # Developing Widgets
 
+This page teaches you to build the UI layer of the graph: Lit web components that read a datatype value and write edits back through the reactive signal system. You'll start with a display-only widget, add editing, then handle multi-field and composite values. By the end you'll know when to reach for Spectrum Web Components, how port widgets differ from node body widgets, and which pitfalls trip people up first. Widgets don't compute anything. They render and edit, and that constraint shapes every decision here.
+
 ## 1. Introduction
 
 Widgets are Lit web components that render UI for datatype values in Project Graph. They extend `WidgetElement<typeof data>` and use a reactive signal system for data binding. Widgets are what users interact with directly in the graph editor — from simple number inputs to complex image previews.

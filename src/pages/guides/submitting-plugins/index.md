@@ -5,6 +5,8 @@ description: Submit your Graph plugin project for review and publish it to the p
 
 # Submitting Plugins
 
+This page gets your project from your machine into the plugin registry. Submission is whole-project. You'll learn how `graph submit` packages everything at once, why the `--changelog` is required, how channels like `release` and `beta` version your work, and the difference between submitting to stage and production. A full worked example closes it out, plus troubleshooting for when a submit gets rejected.
+
 ## Introduction
 
 Once you've developed and tested your plugins locally, the next step is submitting them for review. This page covers the complete submission workflow.

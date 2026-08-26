@@ -5,6 +5,8 @@ description: Complete reference for the Graph CLI — login, install, build, lin
 
 # Graph CLI Reference
 
+This is the lookup page for the `graph` CLI. Bookmark it. Every command is here: `login`, `install`, `build`, `lint`, `format`, `dev`, and `submit`, plus the global flags and how the CLI reads its environment config. Jump in when you need the exact flag or want to know what a command actually does.
+
 ## Introduction
 
 The `graph` CLI is the primary tool for developing, building, testing, and publishing Graph plugins. It handles everything from local development with hot-reload to submitting your plugin project for review.

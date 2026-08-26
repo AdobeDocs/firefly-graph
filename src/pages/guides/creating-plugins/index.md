@@ -5,6 +5,8 @@ description: Set up a plugin project and build your first Graph plugin from scra
 
 # Creating Plugins
 
+Work through this page and you'll go from an empty folder to a running node that adds two numbers, hot-reloaded by the Graph CLI. You'll set up a plugin project, see how one project can hold many plugins, and learn how a manifest and a `plugin.ts` fit together. This is the on-ramp. Everything else in the guide builds on it.
+
 ## Introduction
 
 Welcome! This guide walks you through building your first Graph plugin from scratch. By the end, you'll have a working node that adds two numbers — and you'll understand the fundamentals needed to build any kind of plugin.

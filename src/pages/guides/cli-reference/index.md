@@ -7,19 +7,21 @@ description: Complete reference for the Graph CLI — login, install, build, lin
 
 ## Introduction
 
-The `graph` CLI (published as `@adobe/graph-cli`) is the primary tool for developing, building, testing, and publishing Graph plugins. It handles everything from local development with hot-reload to submitting your plugin project for review.
+The `graph` CLI is the primary tool for developing, building, testing, and publishing Graph plugins. It handles everything from local development with hot-reload to submitting your plugin project for review.
 
 Whether you're creating nodes, widgets, datatypes, or utility plugins, `graph` provides a unified development experience with integrated build tooling, dependency management, and seamless integration with the Graph Plugin Registry.
 
 ## Installation
 
-Install the Graph CLI globally using npm:
+The Graph CLI is distributed through the [Adobe Developer Console](https://developer.adobe.com/console). Sign in with your Adobe ID, accept the Terms of Use, and download the CLI for your platform — it is not published to a public package registry.
+
+Once the download is complete, verify the CLI is available on your `PATH`:
 
 ```bash
-npm install -g @adobe/graph-cli
+graph --version
 ```
 
-The package is published as `@adobe/graph-cli`, but the command it installs is `graph`.
+The command it installs is `graph`. Before using registry commands such as `submit` and `install`, authenticate with Adobe IMS by running `graph login`.
 
 ## Global Options
 
@@ -232,7 +234,7 @@ export GRAPH_SDK_ENV="stage"
 
 <InlineAlert variant="info" slots="text"/>
 
-The environment variable is still named `GRAPH_SDK_ENV` — it was not renamed as part of the CLI's rebrand to `graph`/`@adobe/graph-cli`.
+The environment variable is still named `GRAPH_SDK_ENV` — it was not renamed as part of the CLI's rebrand to `graph`.
 
 `GRAPH_SDK_ENV=stage` affects two things:
 

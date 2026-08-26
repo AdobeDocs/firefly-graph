@@ -27,7 +27,7 @@ Make sure you have the following before starting:
 * **Node.js** v22 or later — check your version with `node --version`
 * **pnpm** package manager
 * **TypeScript** fundamentals — plugins are written in TypeScript
-* **Graph CLI** — the build, dev, and publish tool for plugins. Install globally with `npm install -g @adobe/graph-cli`
+* **Graph CLI** — the build, dev, and publish tool for plugins. Download it from the [Adobe Developer Console](https://developer.adobe.com/console) (see [Creating Plugins](creating-plugins/) for setup)
 * **Adobe IMS credentials** — required for submitting plugins and accessing the plugin registry
 
 ## Guide Contents

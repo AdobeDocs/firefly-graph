@@ -22,6 +22,7 @@ the script can be run from anywhere.
 Re-run this whenever a new platform version bundle is produced; it overwrites the pages.
 """
 
+import argparse
 import glob
 import json
 import os
@@ -33,12 +34,29 @@ SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 OUT_DIR = os.path.join(SCRIPT_DIR, "..", "src", "pages", "guides", "platform-versions")
 
 
-def bundle_dir() -> str:
-    if len(sys.argv) > 1:
-        return os.path.expanduser(sys.argv[1])
+def resolve_bundle_dir(arg: str = "") -> str:
+    """Resolve the bundle directory: explicit CLI arg, then $PLATFORM_BUNDLE_DIR, then default."""
+    if arg:
+        return os.path.expanduser(arg)
     return os.path.expanduser(
         os.environ.get("PLATFORM_BUNDLE_DIR", "~/platform-bundle-backfill/output-all")
     )
+
+
+def existing_versions() -> list:
+    """Return every platform version that already has a generated page under OUT_DIR.
+
+    The index is built from what is actually on disk — not from the bundle directory — so
+    a single-version run (`--version X.Y`) can add one page and still emit a complete index
+    that lists every previously generated version alongside the new one.
+    """
+    out = []
+    for name in os.listdir(OUT_DIR):
+        if re.fullmatch(r"\d+\.\d+", name) and os.path.isfile(
+            os.path.join(OUT_DIR, name, "index.md")
+        ):
+            out.append(name)
+    return sorted(out, key=version_key)
 
 
 def load_modules(base: str, version: str) -> dict:
@@ -126,7 +144,11 @@ def write_version_page(base: str, version: str) -> None:
         f.write("\n".join(lines).rstrip() + "\n")
 
 
-def write_index(versions: list, latest: str) -> None:
+def write_index() -> None:
+    versions = existing_versions()
+    if not versions:
+        return
+    latest = versions[-1]
     lines = [
         "---",
         "title: Platform Library Reference - Firefly Graph",
@@ -157,20 +179,45 @@ def write_index(versions: list, latest: str) -> None:
 
 
 def main() -> None:
-    base = bundle_dir()
+    parser = argparse.ArgumentParser(description=__doc__.splitlines()[0])
+    parser.add_argument(
+        "bundle_dir",
+        nargs="?",
+        default="",
+        help="Directory with one subdirectory per version. "
+        "Defaults to $PLATFORM_BUNDLE_DIR, then ~/platform-bundle-backfill/output-all.",
+    )
+    parser.add_argument(
+        "--version",
+        metavar="X.Y",
+        help="Generate only this version's page (its subdirectory must exist in BUNDLE_DIR), "
+        "then rebuild the index from all pages on disk. Used by the new-version PR automation.",
+    )
+    args = parser.parse_args()
+
+    base = resolve_bundle_dir(args.bundle_dir)
     if not os.path.isdir(base):
         sys.exit(f"bundle directory not found: {base}")
+
+    if args.version:
+        if not os.path.isdir(os.path.join(base, args.version)):
+            sys.exit(f"version directory not found: {os.path.join(base, args.version)}")
+        write_version_page(base, args.version)
+        write_index()
+        print(f"Generated page for {args.version} + index (latest: {existing_versions()[-1]})")
+        print(f"Output: {os.path.normpath(OUT_DIR)}")
+        return
+
     versions = sorted(
         (os.path.basename(p) for p in glob.glob(os.path.join(base, "*")) if os.path.isdir(p)),
         key=version_key,
     )
     if not versions:
         sys.exit(f"no version subdirectories found in {base}")
-    latest = versions[-1]
     for v in versions:
         write_version_page(base, v)
-    write_index(versions, latest)
-    print(f"Generated {len(versions)} version pages + index (latest: {latest})")
+    write_index()
+    print(f"Generated {len(versions)} version pages + index (latest: {existing_versions()[-1]})")
     print(f"Output: {os.path.normpath(OUT_DIR)}")
 
 

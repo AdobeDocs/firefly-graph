@@ -1,0 +1,88 @@
+---
+name: Check for new platform version
+
+# Opens a PR adding a Platform Library Reference page whenever a new platform version is
+# published to the prod archival endpoint (graph.adobe.com/graph/platform). See
+# scripts/sync-platform-versions.py and scripts/gen-platform-pages.py.
+on:
+  schedule:
+    # Daily at 08:17 UTC. Off the hour to avoid the top-of-hour scheduling backlog.
+    - cron: "17 8 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  check:
+    name: Detect and open PR
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.x"
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "24"
+
+      - name: Detect and generate new platform version pages
+        id: generate
+        run: |
+          set -euo pipefail
+          BUNDLE_DIR="$(mktemp -d)"
+          new_versions="$(python3 scripts/sync-platform-versions.py "$BUNDLE_DIR")"
+          if [ -z "$new_versions" ]; then
+            echo "No new platform versions to document."
+            echo "new_versions=" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+          echo "New platform versions detected:"
+          echo "$new_versions"
+          while IFS= read -r version; do
+            [ -n "$version" ] || continue
+            python3 scripts/gen-platform-pages.py --version "$version" "$BUNDLE_DIR"
+          done <<< "$new_versions"
+          echo "new_versions=$(echo "$new_versions" | paste -sd, -)" >> "$GITHUB_OUTPUT"
+
+      - name: Lint generated pages
+        if: steps.generate.outputs.new_versions != ''
+        run: npm run lint:errorOnly
+
+      - name: Create Pull Request
+        if: steps.generate.outputs.new_versions != ''
+        uses: peter-evans/create-pull-request@v7
+        with:
+          # A PAT (repo scope) lets the resulting PR trigger lint.yml; without one the PR
+          # opens under GITHUB_TOKEN, which by design does not trigger other workflows — the
+          # in-workflow lint step above is the standing quality gate in that case.
+          token: ${{ secrets.PLATFORM_VERSION_PR_TOKEN || secrets.GITHUB_TOKEN }}
+          branch: platform-version/new-pages
+          delete-branch: true
+          commit-message: "docs: add platform library reference for ${{ steps.generate.outputs.new_versions }}"
+          title: "docs: add platform library reference for ${{ steps.generate.outputs.new_versions }}"
+          labels: |
+            documentation
+            automated
+          body: |
+            ## Automated platform version page
+
+            New Platform Library Reference page(s) generated for: **${{ steps.generate.outputs.new_versions }}**
+
+            ### How this was produced
+            - `scripts/sync-platform-versions.py` detected the version(s) via the public
+              archival endpoint at `https://graph.adobe.com/graph/platform/` (GRAPH-3604) and
+              downloaded each one's `@graph/platform-exports` bundle.
+            - `scripts/gen-platform-pages.py --version <version>` rendered the page and
+              refreshed the reference index.
+
+            ### Reviewer checklist
+            - [ ] Library list and version ranges look right for the release.
+            - [ ] The index lists the new version and the `— latest` marker is correct.
+            - [ ] `npm run lint` passes (also run in-workflow before this PR was opened).

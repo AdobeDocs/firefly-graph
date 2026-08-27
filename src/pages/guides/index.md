@@ -74,6 +74,14 @@ Complete reference for all `graph` commands: `login`, `install`, `build`, `lint`
 
 How to submit your plugin project for review and publish it to the plugin registry. Covers the submission flow, review criteria, channels, and what happens after your submission is approved.
 
+### 11. [Plugin Versioning](plugin-versioning/index.md)
+
+How to version your own plugins. Covers the `<major>.<minor>` version field (no patch), when to bump major versus minor, and how versions relate to submitting your project.
+
+### 12. [Platform Versioning](platform-versioning/index.md)
+
+How the Graph platform API is versioned and how plugins target it. Covers the `platformVersion` manifest field, per-plugin version targeting, and how the CLI resolves a separate bundle for each `major.minor`.
+
 <InlineAlert variant="info" slots="text"/>
 
 Need help? Reach out to the Graph team in the [#prj-graph-plugins](https://adobe.enterprise.slack.com/archives/C0ANK4FL49W) Slack channel.

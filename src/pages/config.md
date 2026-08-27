@@ -19,6 +19,8 @@
         - [Developing Utilities](guides/developing-utilities/index.md)
         - [CLI Reference](guides/cli-reference/index.md)
         - [Submitting Plugins](guides/submitting-plugins/index.md)
+        - [Plugin Versioning](guides/plugin-versioning/index.md)
+        - [Platform Versioning](guides/platform-versioning/index.md)
     - [Overview](support/index.md)
         - [Help](support/index.md)
         - [FAQ](support/FAQ/index.md)

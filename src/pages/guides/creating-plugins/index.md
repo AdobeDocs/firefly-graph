@@ -92,16 +92,14 @@ mkdir -p my-plugins/src/node-add
 cd my-plugins
 ```
 
-Now create the `package.json` at the root of your project. This provides the Node.js package environment for the project's tooling:
+Now create the `package.json` at the root of your project. This provides the Node.js package environment for the project's tooling. The `name` must be a scoped package name (`@scope/name`) — it identifies your whole project when you submit it:
 
 ```json
 {
-  "name": "my-plugins",
+  "name": "@adobe/my-plugins",
   "version": "1.0.0",
   "type": "module",
   "devDependencies": {
-    "@graph/graph-plugin-types": "^2.1.5", // versions may need updating to latest
-    "@graph/platform-exports": "^2.2.10",
     "typescript": "^6.0.3"
   }
 }
@@ -117,7 +115,7 @@ Create `src/node-add/manifest.json`:
 {
   "name": "@adobe/node-add",
   "version": "1.0",
-  "platformVersion": 1,
+  "platformVersion": { "major": 2, "minor": 0 },
   "type": "node",
   "assets": {
     "internal": {},
@@ -132,9 +130,9 @@ Create `src/node-add/manifest.json`:
 
 Let's understand what each field means:
 
-* **name** — Your plugin's unique identifier. By convention, use `@yourcompany/plugin-name`.
-* **version** — Your plugin's version. Use semantic versioning.
-* **platformVersion** — Which version of the Graph platform API this plugin targets. Currently always `1`.
+* **name** — Your plugin's unique identifier. Use `@adobe-assigned-scope/<plugin-type>-name` (for example, `@adobe/node-add`). The name must begin with the plugin type — `node-`, `widget-`, `datatype-`, or `utility-` — because the platform derives the plugin's type from its name.
+* **version** — Your plugin's version. Use `<major>.<minor>` with no patch segment (for example, `1.0`). See [Plugin Versioning](../plugin-versioning/index.md) for the full policy.
+* **platformVersion** — Which version of the Graph platform API this plugin targets, written as `{ "major": <n>, "minor": <n> }`. See [Platform Versioning](../platform-versioning/index.md) for how to pick a version and how the CLI resolves the matching bundle.
 * **dependencies** — Other plugins your plugin needs. Our add node depends on `datatype-number` (for number values) and `widget-number` (for number input UI).
 
 <InlineAlert variant="info" slots="text"/>
@@ -179,7 +177,7 @@ Let's walk through each part of this code:
 
 * **displayName** — What users see in the node catalog when browsing for nodes to add.
 * **description** — A short explanation of what the node does. Keep it clear and concise.
-* **tags** — Help users find your node. Use `category:` prefix for categories (like `category:math`), then add other descriptive tags.
+* **tags** — Help users find your node. Use the `category:` prefix to set which section of the node catalog your node appears under (for example, `category:math`), then add other descriptive tags.
 
 #### Ports
 

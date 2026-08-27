@@ -1,70 +1,208 @@
 {
-  "total": 13,
+  "total": 43,
   "offset": 0,
-  "limit": 13,
+  "limit": 43,
   "data": [
     {
       "page": "/",
       "avatars": [
         "https://avatars.githubusercontent.com/u/153588552?v=4"
       ],
-      "lastUpdated": "8/13/2026"
-    },
-    {
-      "page": "/api/",
-      "avatars": [
-        "https://avatars.githubusercontent.com/u/153588552?v=4"
-      ],
-      "lastUpdated": "8/13/2026"
-    },
-    {
-      "page": "/api/1-4",
-      "avatars": [
-        "https://avatars.githubusercontent.com/u/153588552?v=4"
-      ],
-      "lastUpdated": "8/13/2026"
+      "lastUpdated": "8/27/2026"
     },
     {
       "page": "/config",
       "avatars": [
         "https://avatars.githubusercontent.com/u/153588552?v=4"
       ],
-      "lastUpdated": "8/13/2026"
+      "lastUpdated": "8/27/2026"
     },
     {
       "page": "/guides/",
       "avatars": [
         "https://avatars.githubusercontent.com/u/153588552?v=4"
       ],
-      "lastUpdated": "8/13/2026"
+      "lastUpdated": "8/27/2026"
     },
     {
-      "page": "/guides/dummy_metrics_api/",
-      "avatars": [
-        "https://avatars.githubusercontent.com/u/153588552?v=4"
-      ],
-      "lastUpdated": "8/13/2026"
+      "page": "/guides/cli-reference/",
+      "avatars": [],
+      "lastUpdated": "8/27/2026"
     },
     {
-      "page": "/guides/dummy_oauth_client/",
-      "avatars": [
-        "https://avatars.githubusercontent.com/u/153588552?v=4"
-      ],
-      "lastUpdated": "8/13/2026"
+      "page": "/guides/core-concepts/",
+      "avatars": [],
+      "lastUpdated": "8/27/2026"
     },
     {
-      "page": "/guides/dummy_using_postman/",
-      "avatars": [
-        "https://avatars.githubusercontent.com/u/153588552?v=4"
-      ],
-      "lastUpdated": "8/13/2026"
+      "page": "/guides/creating-plugins/",
+      "avatars": [],
+      "lastUpdated": "8/27/2026"
     },
     {
-      "page": "/guides/migrating/",
-      "avatars": [
-        "https://avatars.githubusercontent.com/u/153588552?v=4"
-      ],
-      "lastUpdated": "8/13/2026"
+      "page": "/guides/developing-datatypes/",
+      "avatars": [],
+      "lastUpdated": "8/27/2026"
+    },
+    {
+      "page": "/guides/developing-nodes/",
+      "avatars": [],
+      "lastUpdated": "8/27/2026"
+    },
+    {
+      "page": "/guides/developing-utilities/",
+      "avatars": [],
+      "lastUpdated": "8/27/2026"
+    },
+    {
+      "page": "/guides/developing-widgets/",
+      "avatars": [],
+      "lastUpdated": "8/27/2026"
+    },
+    {
+      "page": "/guides/how-to-think-about-nodes/",
+      "avatars": [],
+      "lastUpdated": "8/27/2026"
+    },
+    {
+      "page": "/guides/platform-versioning/",
+      "avatars": [],
+      "lastUpdated": "8/27/2026"
+    },
+    {
+      "page": "/guides/platform-versions/",
+      "avatars": [],
+      "lastUpdated": "8/27/2026"
+    },
+    {
+      "page": "/guides/platform-versions/1.1/",
+      "avatars": [],
+      "lastUpdated": "8/27/2026"
+    },
+    {
+      "page": "/guides/platform-versions/1.2/",
+      "avatars": [],
+      "lastUpdated": "8/27/2026"
+    },
+    {
+      "page": "/guides/platform-versions/1.3/",
+      "avatars": [],
+      "lastUpdated": "8/27/2026"
+    },
+    {
+      "page": "/guides/platform-versions/1.4/",
+      "avatars": [],
+      "lastUpdated": "8/27/2026"
+    },
+    {
+      "page": "/guides/platform-versions/1.5/",
+      "avatars": [],
+      "lastUpdated": "8/27/2026"
+    },
+    {
+      "page": "/guides/platform-versions/1.6/",
+      "avatars": [],
+      "lastUpdated": "8/27/2026"
+    },
+    {
+      "page": "/guides/platform-versions/1.7/",
+      "avatars": [],
+      "lastUpdated": "8/27/2026"
+    },
+    {
+      "page": "/guides/platform-versions/2.1/",
+      "avatars": [],
+      "lastUpdated": "8/27/2026"
+    },
+    {
+      "page": "/guides/platform-versions/2.10/",
+      "avatars": [],
+      "lastUpdated": "8/27/2026"
+    },
+    {
+      "page": "/guides/platform-versions/2.11/",
+      "avatars": [],
+      "lastUpdated": "8/27/2026"
+    },
+    {
+      "page": "/guides/platform-versions/2.12/",
+      "avatars": [],
+      "lastUpdated": "8/27/2026"
+    },
+    {
+      "page": "/guides/platform-versions/2.13/",
+      "avatars": [],
+      "lastUpdated": "8/27/2026"
+    },
+    {
+      "page": "/guides/platform-versions/2.14/",
+      "avatars": [],
+      "lastUpdated": "8/27/2026"
+    },
+    {
+      "page": "/guides/platform-versions/2.15/",
+      "avatars": [],
+      "lastUpdated": "8/27/2026"
+    },
+    {
+      "page": "/guides/platform-versions/2.16/",
+      "avatars": [],
+      "lastUpdated": "8/27/2026"
+    },
+    {
+      "page": "/guides/platform-versions/2.17/",
+      "avatars": [],
+      "lastUpdated": "8/27/2026"
+    },
+    {
+      "page": "/guides/platform-versions/2.3/",
+      "avatars": [],
+      "lastUpdated": "8/27/2026"
+    },
+    {
+      "page": "/guides/platform-versions/2.4/",
+      "avatars": [],
+      "lastUpdated": "8/27/2026"
+    },
+    {
+      "page": "/guides/platform-versions/2.5/",
+      "avatars": [],
+      "lastUpdated": "8/27/2026"
+    },
+    {
+      "page": "/guides/platform-versions/2.6/",
+      "avatars": [],
+      "lastUpdated": "8/27/2026"
+    },
+    {
+      "page": "/guides/platform-versions/2.7/",
+      "avatars": [],
+      "lastUpdated": "8/27/2026"
+    },
+    {
+      "page": "/guides/platform-versions/2.8/",
+      "avatars": [],
+      "lastUpdated": "8/27/2026"
+    },
+    {
+      "page": "/guides/platform-versions/2.9/",
+      "avatars": [],
+      "lastUpdated": "8/27/2026"
+    },
+    {
+      "page": "/guides/plugin-versioning/",
+      "avatars": [],
+      "lastUpdated": "8/27/2026"
+    },
+    {
+      "page": "/guides/submitting-plugins/",
+      "avatars": [],
+      "lastUpdated": "8/27/2026"
+    },
+    {
+      "page": "/guides/widget-design-guidelines/",
+      "avatars": [],
+      "lastUpdated": "8/27/2026"
     },
     {
       "page": "/support/",

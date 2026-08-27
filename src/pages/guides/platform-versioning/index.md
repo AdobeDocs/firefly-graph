@@ -63,3 +63,5 @@ When your plugin is resolved for a graph, the platform matches it to the host's 
 ## Choosing a Version
 
 Target the current stable platform version for new plugins. Bump a plugin's `platformVersion` when you want an API added in a later release, or when the platform ships a new major and you're ready to move. Because each bump is isolated to one plugin, you can upgrade one plugin at a time and leave the rest untouched.
+
+To see exactly which libraries and versions a given platform release provides — Lit, Spectrum Web Components, the `@graph/*` packages, and the import paths available from each — check the [Platform Library Reference](../platform-versions/index.md).

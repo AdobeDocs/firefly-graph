@@ -21,6 +21,7 @@
         - [Submitting Plugins](guides/submitting-plugins/index.md)
         - [Plugin Versioning](guides/plugin-versioning/index.md)
         - [Platform Versioning](guides/platform-versioning/index.md)
+        - [Platform Library Reference](guides/platform-versions/index.md)
     - [Overview](support/index.md)
         - [Help](support/index.md)
         - [FAQ](support/FAQ/index.md)

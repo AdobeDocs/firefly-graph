@@ -82,6 +82,10 @@ How to version your own plugins. Covers the `<major>.<minor>` version field (no 
 
 How the Graph platform API is versioned and how plugins target it. Covers the `platformVersion` manifest field, per-plugin version targeting, and how the CLI resolves a separate bundle for each `major.minor`.
 
+### 13. [Platform Library Reference](platform-versions/index.md)
+
+Exactly which libraries and versions each platform release provides — Lit, Spectrum Web Components, the `@graph/*` packages, and the import paths available from each. One page per platform version.
+
 <InlineAlert variant="info" slots="text"/>
 
 Need help? Reach out to the Graph team in the [#prj-graph-plugins](https://adobe.enterprise.slack.com/archives/C0ANK4FL49W) Slack channel.

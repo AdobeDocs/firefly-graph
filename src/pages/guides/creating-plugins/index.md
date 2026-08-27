@@ -28,7 +28,7 @@ A single plugin project can contain **many plugins**. All plugins in a project s
 Before you begin, make sure you have:
 
 * **Node.js** v22 or later — Check your version with `node --version`
-* **pnpm** package manager — Install globally with `npm install -g pnpm`
+* **A package manager** — npm ships with Node.js; pnpm or Yarn work equally well if you prefer them
 * A code editor (VS Code recommended)
 * Basic TypeScript knowledge — You should be comfortable with interfaces, async/await, and basic types
 
@@ -233,10 +233,10 @@ This creates `.plugin-dependencies/` symlinks so your editor can resolve depende
 
 ### Step 5: Build
 
-Now let's build the plugin. First, install npm dependencies:
+Now let's build the plugin. First, install the project's dependencies. This guide uses `npm`, but pnpm or Yarn work just as well:
 
 ```bash
-pnpm install
+npm install
 ```
 
 Then build:

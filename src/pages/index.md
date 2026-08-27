@@ -75,7 +75,7 @@ Complete reference for every `graph` command: `login`, `install`, `build`, `lint
 Make sure you have the following before starting:
 
 * **Node.js** v22 or later — check your version with `node --version`
-* **pnpm** package manager
+* **A package manager** — npm (ships with Node.js), pnpm, or Yarn all work
 * **TypeScript** fundamentals — plugins are written in TypeScript
 * **Graph CLI** — the build, dev, and publish tool for plugins. Install globally with `npm install -g @adobe/graph-cli`
 * **Adobe IMS credentials** — required for submitting plugins and accessing the plugin registry

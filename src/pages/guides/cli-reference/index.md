@@ -254,7 +254,7 @@ The stage environment uses separate IMS credentials and a separate plugin servic
 
 Here's a typical workflow for developing and publishing Graph plugins:
 
-1. **Install dependencies** — Run `pnpm install` to install project dependencies
+1. **Install dependencies** — Run `npm install` (or the equivalent for your package manager) to install project dependencies
 2. **Authenticate** — Run `graph login` to authenticate with Adobe IMS (credentials are cached for future commands)
 3. **Install plugin dependencies** — Run `graph install` to link plugin dependency types and provision platform bundles
 4. **Start dev server** — Run `graph dev` to start the development server with hot-reload
@@ -264,10 +264,10 @@ Here's a typical workflow for developing and publishing Graph plugins:
 
 ## Package Management
 
-The `graph` CLI is designed to work alongside standard npm/pnpm package management workflows:
+The `graph` CLI works alongside whichever Node package manager you prefer (npm, pnpm, or Yarn):
 
-* Use `pnpm install` to install dependencies
-* For running package scripts, use `pnpm run test`, `pnpm run lint`, etc.
+* Use your package manager to install dependencies (`npm install`, `pnpm install`, or `yarn`)
+* Run package scripts the usual way (`npm run test`, `pnpm run lint`, etc.)
 * The `graph` CLI handles plugin-specific operations like installing, building, dev server, and submission
 
 Your `package.json` can include scripts that delegate to `graph`:

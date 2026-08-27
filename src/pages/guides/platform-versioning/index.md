@@ -5,7 +5,7 @@ description: How the Graph platform API is versioned, how plugins target a versi
 
 # Platform Versioning
 
-By the end of this page you'll know what the `platformVersion` field in your manifest actually controls, how to pick a value for it, and what the CLI does with it behind the scenes. The short version: every plugin declares which release of the Graph platform API it was built against, and the CLI fetches a matching bundle for exactly that version. Two plugins in the same project can target two different platform versions without stepping on each other.
+By the end of this page you'll know what the `platformVersion` field in your manifest actually controls, how to pick a value for it, what the CLI does with it at build time, and how it decides compatibility once your plugin is running. The short version: every plugin declares which release of the Graph platform API it was built against. The CLI fetches a matching bundle for exactly that version, and at runtime the host only loads your plugin against a compatible platform. Two plugins in the same project can target two different platform versions without stepping on each other.
 
 ## The platformVersion Field
 
@@ -48,6 +48,17 @@ Each directory is installed independently and holds its own `node_modules`. Plug
 <InlineAlert variant="info" slots="text"/>
 
 This is why the platform packages don't belong in your project's `package.json`. `graph install` downloads them as versioned bundles keyed to each plugin's `platformVersion`, rather than resolving them as ordinary npm dependencies. See [Creating Plugins](../creating-plugins/index.md) for how a project is set up.
+
+## Runtime Compatibility
+
+`platformVersion` isn't only a build-time setting — it's the contract that decides whether your plugin can run in a given host. Plugins aren't bundled into the application. Each one is loaded on demand as an ES module, and it doesn't carry its own copy of the platform. Instead it imports the shared platform runtime the host provides — `@graph/platform-exports`, Lit, Spectrum Web Components — which the host resolves through an import map and serves from a version-keyed cache. Your plugin runs against the host's platform, not one of its own.
+
+That shared runtime is what makes the major and minor meaningful at execution time:
+
+* **Major is the compatibility boundary.** A plugin is compatible with a host that runs the same platform major. A plugin built against major 2 doesn't run against a major 1 host, and vice versa — the breaking changes between majors are exactly what a shared runtime can't paper over.
+* **Minor is backward-compatible within a major.** Because a higher minor only *adds* to the platform, a host on a later minor can run a plugin built against an earlier minor of the same major. The plugin only reaches for APIs that were already there.
+
+When your plugin is resolved for a graph, the platform matches it to the host's major and loads a compatible published version. If nothing compatible is available, the plugin isn't loaded at all, rather than being run against a mismatched runtime and failing in unpredictable ways.
 
 ## Choosing a Version
 

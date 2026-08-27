@@ -36,7 +36,7 @@ Before you begin, make sure you have:
 
 The Graph CLI is distributed through the [Adobe Developer Console](https://developer.adobe.com/console). Sign in with your Adobe ID, accept the Terms of Use, and download the CLI for your platform — it is not published to a public package registry, so no npm registry configuration is required.
 
-<!-- TODO(GRAPH-2737): Replace with the exact Adobe Developer Console download path/URL once the self-service SDK Onboarding flow is live. -->
+[//]: # (TODO GRAPH-2737: replace with the exact Adobe Developer Console download path/URL once the self-service SDK Onboarding flow is live.)
 
 Once the download completes, confirm the CLI is available on your `PATH`:
 
@@ -71,9 +71,6 @@ my-plugins/
 ├── package.json                      ← shared tooling config
 └── node_modules/
 ```
-
-<!-- TODO(GRAPH-2737): Reconcile the project's dependency-provisioning story with the Developer Console distribution model. Under DC distribution there is no Adobe Artifactory registry; the @graph/* platform packages are provisioned by `graph install` (the platform bundle), so the package.json devDependencies and any .npmrc guidance below need to be confirmed against the current scaffold. -->
-
 
 The CLI discovers plugins by **scanning `src/` for directories that contain a `manifest.json`**. There is no central registry file to maintain.
 

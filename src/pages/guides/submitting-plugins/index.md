@@ -74,7 +74,7 @@ Channel names must be **3–30 characters**, using only lowercase letters, digit
 
 <InlineAlert variant="info" slots="text"/>
 
-Channel semantics — and how a build is promoted from one channel to another — are governed by the plugin registry, not the CLI. If you're unsure which channel to use, ask in the Graph team Slack channel below.
+Channel semantics — and how a build is promoted from one channel to another — are governed by the plugin registry, not the CLI. If you're unsure which channel to use, ask the Graph team.
 
 ## Stage vs Production
 
@@ -134,4 +134,4 @@ Common failures and what they mean:
 
 <InlineAlert variant="info" slots="text"/>
 
-**Need help?** Reach out to the Graph team in the [#prj-graph-plugins](https://adobe.enterprise.slack.com/archives/C0ANK4FL49W) Slack channel.
+**Need help?** Reach out to the Graph team.

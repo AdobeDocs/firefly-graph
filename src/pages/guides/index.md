@@ -88,4 +88,6 @@ Exactly which libraries and versions each platform release provides — Lit, Spe
 
 <InlineAlert variant="info" slots="text"/>
 
-Need help? Reach out to the Graph team in the [#prj-graph-plugins](https://adobe.enterprise.slack.com/archives/C0ANK4FL49W) Slack channel.
+Need help? Reach out to the Graph team.
+
+[//]: # (TODO: establish an externally reachable Graph team contact mechanism and link it here, then apply the same link to every "Reach out to the Graph team." help footer across these guide pages. The internal Slack channel was removed because external developers cannot access it.)

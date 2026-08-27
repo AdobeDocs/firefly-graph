@@ -294,4 +294,4 @@ Essential terms for understanding the Project Graph plugin system:
 
 <InlineAlert variant="info" slots="text"/>
 
-**Need help?** Reach out to the Graph team in the [#prj-graph-plugins](https://adobe.enterprise.slack.com/archives/C0ANK4FL49W) Slack channel.
+**Need help?** Reach out to the Graph team.

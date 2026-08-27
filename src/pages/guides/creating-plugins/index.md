@@ -432,6 +432,6 @@ Congratulations! You've built your first Graph plugin. Here's where to go from h
 
 <InlineAlert variant="info" slots="text"/>
 
-**Have questions?** Reach out to the Graph team in the [#prj-graph-plugins](https://adobe.enterprise.slack.com/archives/C0ANK4FL49W) Slack channel. We're here to help!
+**Have questions?** Reach out to the Graph team. We're here to help!
 
 Happy building!

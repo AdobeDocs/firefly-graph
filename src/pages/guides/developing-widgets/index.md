@@ -624,4 +624,4 @@ Now that you understand widget development, here are some recommended next steps
 
 <InlineAlert variant="info" slots="text"/>
 
-**Need help?** Reach out to the Graph team in the [#prj-graph-plugins](https://adobe.enterprise.slack.com/archives/C0ANK4FL49W) Slack channel.
+**Need help?** Reach out to the Graph team.

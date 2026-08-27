@@ -25,6 +25,7 @@ Re-run this whenever a new platform version bundle is produced; it overwrites th
 import glob
 import json
 import os
+import re
 import subprocess
 import sys
 
@@ -71,6 +72,19 @@ def version_key(v: str) -> tuple:
     return (int(major), int(minor))
 
 
+def anchor(heading: str) -> str:
+    """Slugify a heading to the id the devsite generates for it.
+
+    Matches the devsite's github-slugger scheme (verified against the linter's
+    `missing-heading` rule): lowercase, drop characters that aren't a letter, digit,
+    space, or hyphen (so `@` and `/` are removed, not hyphenated), then turn spaces into
+    hyphens. Existing hyphens are kept. So `@spectrum-web-components/action-button`
+    becomes `spectrum-web-componentsaction-button`.
+    """
+    s = re.sub(r"[^a-z0-9 -]", "", heading.lower())
+    return s.replace(" ", "-")
+
+
 def write_version_page(base: str, version: str) -> None:
     major, minor = version.split(".")
     mods = load_modules(base, version)
@@ -90,11 +104,18 @@ def write_version_page(base: str, version: str) -> None:
         "See [Platform Versioning](../../platform-versioning/index.md) for how targeting and runtime compatibility work, "
         "and the [reference index](../index.md) for the other platform versions.",
         "",
-        "## Libraries",
+        "**On this page:**",
         "",
     ]
+    for name in mods:
+        lines.append(f"* [{name}](#{anchor(name)})")
+    lines.append("")
+    lines.append("## Libraries")
+    lines.append("")
     for name, info in mods.items():
-        lines.append(f"### {name} — `{info.get('version', '')}`")
+        lines.append(f"### {name}")
+        lines.append("")
+        lines.append(f"**Version:** `{info.get('version', '')}`")
         lines.append("")
         lines.append("```text")
         lines.extend(specifiers(name, info.get("exports", [])))

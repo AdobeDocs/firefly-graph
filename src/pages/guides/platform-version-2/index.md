@@ -1,11 +1,15 @@
 ---
-title: Platform Version 2 - Firefly Graph
-description: The Plugin Development Guide and Platform Library Reference for Graph Platform Version 2.
+title: API Guide - Firefly Graph
+description: The Graph plugin API Guide and Platform Library Reference for Platform Version 2.
 ---
 
-# Platform Version 2
+# API Guide
 
-The hands-on guide for building plugins on Graph **Platform Version 2**, plus the library reference for each 2.x release.
+<InlineAlert variant="info" slots="text"/>
+
+This API Guide documents **Platform Version 2**.
+
+The hands-on guide for building plugins against the Graph platform API, plus the library reference for each 2.x release.
 
 ## Plugin Development Guide
 

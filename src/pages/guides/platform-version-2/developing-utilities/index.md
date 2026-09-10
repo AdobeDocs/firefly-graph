@@ -5,6 +5,11 @@ description: Build utility plugins that share reusable code across other plugins
 
 # Developing Utilities
 
+<InlineAlert variant="info" slots="text"/>
+
+This API Guide documents **Platform Version 2**.
+
+
 Utility plugins are the shared-code layer: no runtime role, just functions, constants, and web worker factories that other plugins import. This page shows you how to build one with `createUtilityPlugin()`, structure a multi-file utility so each source file compiles to its own bundle, and wire up a web worker with `new URL()`. It also covers consuming a utility from another plugin, plus the pitfalls that bite. Reach for it only when code is genuinely shared. Not before.
 
 ## What is a Utility Plugin?

@@ -16,7 +16,7 @@
             - [Plugin Versioning](guides/plugin-versioning/index.md)
             - [Platform Versioning](guides/platform-versioning/index.md)
             - [Submitting Plugins](guides/submitting-plugins/index.md)
-        - [Platform Version 2](guides/platform-version-2/index.md)
+        - [API Guide](guides/platform-version-2/index.md)
             - [Creating Plugins](guides/platform-version-2/creating-plugins/index.md)
             - [Developing Datatypes](guides/platform-version-2/developing-datatypes/index.md)
             - [Developing Widgets](guides/platform-version-2/developing-widgets/index.md)

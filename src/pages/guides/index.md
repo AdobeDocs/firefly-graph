@@ -43,9 +43,9 @@ New here? Start with [Core Concepts](core-concepts/index.md), then [Creating Plu
 * **[Platform Versioning](platform-versioning/index.md)** — how the Graph platform API is versioned and how plugins target it. Covers the `platformVersion` manifest field, per-plugin version targeting, and how the CLI resolves a separate bundle for each `major.minor`.
 * **[Submitting Plugins](submitting-plugins/index.md)** — how to submit your plugin project for review and publish it to the plugin registry. Covers the submission flow, review criteria, channels, and what happens after your submission is approved.
 
-### Platform Version 2
+### API Guide
 
-The hands-on guide for building plugins on Platform Version 2.
+The hands-on guide for building plugins against the Graph platform API.
 
 * **[Creating Plugins](platform-version-2/creating-plugins/index.md)** — how to set up a plugin project and build your first plugin from scratch. Covers project structure, the manifest format, and a step-by-step tutorial for creating a node. Includes reference material on adding more plugins, manifest schemas, and common pitfalls.
 * **[Developing Datatypes](platform-version-2/developing-datatypes/index.md)** — how to define the data shapes that flow through your graph. Covers intrinsic types, resource types (images, video, audio), and composite types built from existing datatypes. Explains when to create a new datatype vs. reuse one, how to design types for maximum widget composability, and the tags and naming conventions that keep the ecosystem consistent.

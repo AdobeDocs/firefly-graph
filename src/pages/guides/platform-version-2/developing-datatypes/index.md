@@ -5,6 +5,11 @@ description: Define the data shapes that flow through a Project Graph workflow.
 
 # Developing Datatypes
 
+<InlineAlert variant="info" slots="text"/>
+
+This API Guide documents **Platform Version 2**.
+
+
 After this page you'll be able to define your own datatypes: intrinsic ones for numbers and strings, resource types for images and other assets, and composite types assembled from datatypes you already have. You'll also know when to skip all that and reuse an existing type instead. Datatypes are the foundation. Every widget and node builds on them, so getting their shape right pays off everywhere downstream.
 
 ## 1. Introduction

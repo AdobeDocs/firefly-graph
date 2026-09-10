@@ -5,6 +5,11 @@ description: Build computational nodes with typed input and output ports in Proj
 
 # Developing Nodes
 
+<InlineAlert variant="info" slots="text"/>
+
+This API Guide documents **Platform Version 2**.
+
+
 Nodes are where computation happens, and this is the deep dive. You'll build one from scratch, configure its input and output ports, and write the `process` function that turns inputs into outputs. From there it covers the harder parts: persistent per-node scope, error handling, binding widgets to ports, calling external APIs through `fetchSources`, and the handful of node patterns you'll reuse constantly. It's long. Keep it open while you work.
 
 ## 1. Introduction

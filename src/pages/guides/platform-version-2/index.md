@@ -17,4 +17,21 @@ The hands-on guide for building plugins on Graph **Platform Version 2**, plus th
 
 ## Platform Library Reference
 
-* **[Platform Library Reference](../platform-versions/index.md)** — which libraries and versions each 2.x release provides, one page per platform minor.
+Every Graph 2.x release ships a fixed set of libraries your plugins can import directly at runtime — Lit, Spectrum Web Components, the `@graph/*` platform packages, and more. Pick a plugin's platform version by setting `platformVersion` in its manifest (see [Platform Versioning](../platform-versioning/index.md)), then open the matching release below to see what you can import.
+
+* [Platform 2.17](../platform-versions/2.17/index.md) — latest
+* [Platform 2.16](../platform-versions/2.16/index.md)
+* [Platform 2.15](../platform-versions/2.15/index.md)
+* [Platform 2.14](../platform-versions/2.14/index.md)
+* [Platform 2.13](../platform-versions/2.13/index.md)
+* [Platform 2.12](../platform-versions/2.12/index.md)
+* [Platform 2.11](../platform-versions/2.11/index.md)
+* [Platform 2.10](../platform-versions/2.10/index.md)
+* [Platform 2.9](../platform-versions/2.9/index.md)
+* [Platform 2.8](../platform-versions/2.8/index.md)
+* [Platform 2.7](../platform-versions/2.7/index.md)
+* [Platform 2.6](../platform-versions/2.6/index.md)
+* [Platform 2.5](../platform-versions/2.5/index.md)
+* [Platform 2.4](../platform-versions/2.4/index.md)
+* [Platform 2.3](../platform-versions/2.3/index.md)
+* [Platform 2.1](../platform-versions/2.1/index.md)

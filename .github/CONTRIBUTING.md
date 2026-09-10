@@ -4,6 +4,27 @@ Thanks for choosing to contribute!
 
 The following are a set of guidelines to follow when contributing to this project.
 
+## Source of Truth for the Plugin Development Guide
+
+The handwritten **Plugin Development Guide** (the pages under `src/pages/guides/`,
+excluding the auto-generated `platform-versions/` reference) is **no longer
+authored in this repository**. Its authoritative source now lives in the Graph
+monorepo, co-located with `@graph/platform-exports`:
+
+> `packages/platform-exports/plugin-development-guide/` in
+> [Adobe-CreativeCloud/graph](https://github.com/Adobe-CreativeCloud/graph)
+
+Those pages here are published/synced from the monorepo and will be overwritten —
+**do not hand-edit them in this repo**. To change the guide, open a PR against the
+monorepo source instead.
+
+What is still maintained here:
+
+- The **Platform Library Reference** under `src/pages/guides/platform-versions/`,
+  which is auto-generated per platform version by `scripts/gen-platform-pages.py`
+  and `scripts/sync-platform-versions.py` (see `scripts/README.md`).
+- Site scaffolding — the landing page, navigation config, and support pages.
+
 ## Code Of Conduct
 
 This project adheres to the Adobe [code of conduct](../CODE_OF_CONDUCT.md). By participating,

@@ -115,12 +115,12 @@ The following sections are still being developed:
 
 ## Related Resources
 
-* For implementation guidance, see [Developing Widgets](../developing-widgets/index.md)
+* For implementation guidance, see [Developing Widgets](../platform-version-2/developing-widgets/index.md)
 * For Spectrum Web Components, visit the [Spectrum Web Components documentation](https://opensource.adobe.com/spectrum-web-components/)
 
 <InlineAlert variant="success" slots="text"/>
 
-**Next:** [Developing Nodes](../developing-nodes/index.md) — Build computational nodes with typed input and output ports, and bind your widgets for inline editing and preview.
+**Next:** [Developing Nodes](../platform-version-2/developing-nodes/index.md) — Build computational nodes with typed input and output ports, and bind your widgets for inline editing and preview.
 
 <InlineAlert variant="info" slots="text"/>
 

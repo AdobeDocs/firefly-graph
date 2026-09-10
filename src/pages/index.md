@@ -46,13 +46,13 @@ Start here for a guided path from zero to a published plugin — core concepts, 
 
 ### Guides
 
-[Creating Plugins](guides/creating-plugins/index.md)
+[Creating Plugins](guides/platform-version-2/creating-plugins/index.md)
 
 Set up a plugin project and build your first node, step by step.
 
 <DiscoverBlock slots="link, text"/>
 
-[Developing Nodes](guides/developing-nodes/index.md)
+[Developing Nodes](guides/platform-version-2/developing-nodes/index.md)
 
 Build computational nodes with typed input and output ports, widget bindings, and persistent state.
 

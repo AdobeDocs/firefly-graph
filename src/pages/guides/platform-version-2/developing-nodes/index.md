@@ -62,7 +62,7 @@ Both input and output ports support the following configuration options:
 | `defaultValue` | varies | No | Default value when no connection is made |
 | `description` | `string` | No | Tooltip/description text |
 | `hidden` | `boolean` | No | Hide the port from the UI (used with nodeWidgetBinding) |
-| `structure` | `("list" \| "stream")[]` | No | Declares the port carries a list or a stream instead of a single value (see [How to Think About Nodes](../how-to-think-about-nodes/index.md)) |
+| `structure` | `("list" \| "stream")[]` | No | Declares the port carries a list or a stream instead of a single value (see [How to Think About Nodes](../../how-to-think-about-nodes/index.md)) |
 | `variadic` | `boolean` | No | Port accepts multiple connections, delivered as an array (see `PortError`'s `variadicIntegerIndex` in the Error Handling section) |
 | `gateMode` | `"strict" \| "lenient" \| "optional"` | No | Runtime behavior for missing/undefined input values. Defaults to `"strict"`. `"optional"` allows execution even if the value is not set yet, `"lenient"` allows execution even if the value is dirty upstream on its connection. |
 | `groupId` | `string` | No | Assigns the port to a port group defined in `portGroups` (see Port Groups below) |
@@ -872,15 +872,15 @@ Validate inputs and surface failures with the typed error classes — `PortError
 
 <InlineAlert variant="info" slots="text"/>
 
-For deeper conceptual understanding of node design patterns and graph thinking, see [How to Think About Nodes](../how-to-think-about-nodes/index.md).
+For deeper conceptual understanding of node design patterns and graph thinking, see [How to Think About Nodes](../../how-to-think-about-nodes/index.md).
 
 ## Next Steps
 
 Now that you understand the fundamentals of node development, explore these related topics:
 
-* **[How to Think About Nodes](../how-to-think-about-nodes/index.md)** — Design philosophy, behavioral classifications, streams vs. lists vs. values, wicked types, and anti-patterns to avoid
-* **[CLI Reference](../cli-reference/index.md)** — Complete reference for build, dev, submit, and install commands
-* **[Submitting Plugins](../submitting-plugins/index.md)** — How to submit your plugins for review and publish to the registry
+* **[How to Think About Nodes](../../how-to-think-about-nodes/index.md)** — Design philosophy, behavioral classifications, streams vs. lists vs. values, wicked types, and anti-patterns to avoid
+* **[CLI Reference](../../cli-reference/index.md)** — Complete reference for build, dev, submit, and install commands
+* **[Submitting Plugins](../../submitting-plugins/index.md)** — How to submit your plugins for review and publish to the registry
 
 <InlineAlert variant="info" slots="text"/>
 

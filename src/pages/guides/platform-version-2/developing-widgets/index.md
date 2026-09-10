@@ -618,7 +618,7 @@ public render(): TemplateResult {
 
 Now that you understand widget development, here are some recommended next steps:
 
-* **[Widget Design Guidelines](../widget-design-guidelines/index.md)** — Visual design patterns, sizing conventions, and when to create a new widget vs. reuse an existing one
+* **[Widget Design Guidelines](../../widget-design-guidelines/index.md)** — Visual design patterns, sizing conventions, and when to create a new widget vs. reuse an existing one
 * **[Developing Nodes](../developing-nodes/index.md)** — Learn how to bind your widgets to node ports for inline editing and preview
 * **[Developing Datatypes](../developing-datatypes/index.md)** — Understanding datatypes is essential for effective widget design
 

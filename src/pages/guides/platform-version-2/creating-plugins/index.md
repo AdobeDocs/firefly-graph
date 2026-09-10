@@ -128,8 +128,8 @@ Create `src/node-add/manifest.json`:
 Let's understand what each field means:
 
 * **name** — Your plugin's unique identifier. Use `@adobe-assigned-scope/<plugin-type>-name` (for example, `@adobe/node-add`). The name must begin with the plugin type — `node-`, `widget-`, `datatype-`, or `utility-` — because the platform derives the plugin's type from its name.
-* **version** — Your plugin's version. Use `<major>.<minor>` with no patch segment (for example, `1.0`). See [Plugin Versioning](../plugin-versioning/index.md) for the full policy.
-* **platformVersion** — Which version of the Graph platform API this plugin targets, written as `{ "major": <n>, "minor": <n> }`. See [Platform Versioning](../platform-versioning/index.md) for how to pick a version and how the CLI resolves the matching bundle.
+* **version** — Your plugin's version. Use `<major>.<minor>` with no patch segment (for example, `1.0`). See [Plugin Versioning](../../plugin-versioning/index.md) for the full policy.
+* **platformVersion** — Which version of the Graph platform API this plugin targets, written as `{ "major": <n>, "minor": <n> }`. See [Platform Versioning](../../platform-versioning/index.md) for how to pick a version and how the CLI resolves the matching bundle.
 * **dependencies** — Other plugins your plugin needs. Our add node depends on `datatype-number` (for number values) and `widget-number` (for number input UI).
 
 <InlineAlert variant="info" slots="text"/>
@@ -427,8 +427,8 @@ Congratulations! You've built your first Graph plugin. Here's where to go from h
 * **[Developing Widgets](../developing-widgets/index.md)** — Build custom UI components for your types. Widgets make it easy for users to edit data visually.
 * **[Developing Utilities](../developing-utilities/index.md)** — Build utility plugins that share functions, constants, and web worker factories across multiple plugins.
 * **[Developing Nodes](../developing-nodes/index.md)** — Deep dive into advanced node patterns, lifecycle methods, context API, and async patterns.
-* **[How to Think About Nodes](../how-to-think-about-nodes/index.md)** — Design guidance for building nodes that work well in the platform.
-* **[CLI Reference](../cli-reference/index.md)** — Complete command documentation for building, testing, and publishing plugins.
+* **[How to Think About Nodes](../../how-to-think-about-nodes/index.md)** — Design guidance for building nodes that work well in the platform.
+* **[CLI Reference](../../cli-reference/index.md)** — Complete command documentation for building, testing, and publishing plugins.
 
 <InlineAlert variant="info" slots="text"/>
 

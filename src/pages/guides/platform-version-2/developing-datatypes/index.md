@@ -247,7 +247,7 @@ Create sample graphs that use your datatype with realistic values. This helps va
 Now that you understand datatype development, explore related topics:
 
 * **[Developing Widgets](../developing-widgets/index.md)** — Learn how to create UI components that view and edit your datatypes
-* **[Widget Design Guidelines](../widget-design-guidelines/index.md)** — Visual design patterns and sizing conventions for widgets
+* **[Widget Design Guidelines](../../widget-design-guidelines/index.md)** — Visual design patterns and sizing conventions for widgets
 * **[Developing Nodes](../developing-nodes/index.md)** — Build processing nodes that consume and produce your datatypes
 
 <InlineAlert variant="info" slots="text"/>

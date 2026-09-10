@@ -320,7 +320,7 @@ The consuming node (`node-factorial`) creates a worker per invocation, sends the
 
 <InlineAlert variant="success" slots="text"/>
 
-**Next:** [CLI Reference](../cli-reference/index.md) — Complete reference for build, dev, and publish commands.
+**Next:** [CLI Reference](../../cli-reference/index.md) — Complete reference for build, dev, and publish commands.
 
 <InlineAlert variant="info" slots="text"/>
 

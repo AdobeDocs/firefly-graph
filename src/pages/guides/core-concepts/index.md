@@ -290,7 +290,7 @@ Essential terms for understanding the Project Graph plugin system:
 
 <InlineAlert variant="success" slots="text"/>
 
-**Next:** [Creating Plugins](../creating-plugins/index.md) — Set up your first plugin project and build a working node.
+**Next:** [Creating Plugins](../platform-version-2/creating-plugins/index.md) — Set up your first plugin project and build a working node.
 
 <InlineAlert variant="info" slots="text"/>
 

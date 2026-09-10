@@ -47,7 +47,7 @@ Each directory is installed independently and holds its own `node_modules`. Plug
 
 <InlineAlert variant="info" slots="text"/>
 
-This is why the platform packages don't belong in your project's `package.json`. `graph install` downloads them as versioned bundles keyed to each plugin's `platformVersion`, rather than resolving them as ordinary npm dependencies. See [Creating Plugins](../creating-plugins/index.md) for how a project is set up.
+This is why the platform packages don't belong in your project's `package.json`. `graph install` downloads them as versioned bundles keyed to each plugin's `platformVersion`, rather than resolving them as ordinary npm dependencies. See [Creating Plugins](../platform-version-2/creating-plugins/index.md) for how a project is set up.
 
 ## Runtime Compatibility
 

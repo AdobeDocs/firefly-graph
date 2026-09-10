@@ -5,6 +5,11 @@ description: Build Lit web components that view and edit datatype values in Proj
 
 # Developing Widgets
 
+<InlineAlert variant="info" slots="text"/>
+
+This API Guide documents **Platform Version 2**.
+
+
 This page teaches you to build the UI layer of the graph: Lit web components that read a datatype value and write edits back through the reactive signal system. You'll start with a display-only widget, add editing, then handle multi-field and composite values. By the end you'll know when to reach for Spectrum Web Components, how port widgets differ from node body widgets, and which pitfalls trip people up first. Widgets don't compute anything. They render and edit, and that constraint shapes every decision here.
 
 ## 1. Introduction
@@ -618,7 +623,7 @@ public render(): TemplateResult {
 
 Now that you understand widget development, here are some recommended next steps:
 
-* **[Widget Design Guidelines](../widget-design-guidelines/index.md)** — Visual design patterns, sizing conventions, and when to create a new widget vs. reuse an existing one
+* **[Widget Design Guidelines](../../widget-design-guidelines/index.md)** — Visual design patterns, sizing conventions, and when to create a new widget vs. reuse an existing one
 * **[Developing Nodes](../developing-nodes/index.md)** — Learn how to bind your widgets to node ports for inline editing and preview
 * **[Developing Datatypes](../developing-datatypes/index.md)** — Understanding datatypes is essential for effective widget design
 
